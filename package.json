@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "semantic-ui-css": "^2.4.1"
+  },
+  "devDependencies": {
+    "@semantic-ui-react/css-patch": "^1.0.0"
+  }
+}
