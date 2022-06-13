@@ -1,5 +1,12 @@
+import React from 'react'
+
+import Hero from "/components/Hero/hero"
+
+
 function HomePage() {
-    return <div>Maker badge!</div>
+    return (
+        <Hero></Hero>
+    )
   }
   
   export default HomePage
