@@ -57,10 +57,14 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define MEM_SCL_Pin GPIO_PIN_9
-#define MEM_SCL_GPIO_Port GPIOA
-#define MEM_SDA_Pin GPIO_PIN_10
-#define MEM_SDA_GPIO_Port GPIOA
+#define DEBUG_TX_Pin GPIO_PIN_9
+#define DEBUG_TX_GPIO_Port GPIOA
+#define DEBUG_RX_Pin GPIO_PIN_10
+#define DEBUG_RX_GPIO_Port GPIOA
+#define MEM_SCL_Pin GPIO_PIN_6
+#define MEM_SCL_GPIO_Port GPIOB
+#define MEM_SDA_Pin GPIO_PIN_7
+#define MEM_SDA_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
