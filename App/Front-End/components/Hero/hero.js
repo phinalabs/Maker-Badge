@@ -33,7 +33,7 @@ export default function Hero() {
                 </div>
                 <div className="col-span-5">
                     <img
-                        src="https://github.com/phinalabs/Maker-Badge/raw/main/PCB/Maker_Badge_2d_view.png"
+                        src="/images/pcb_blue_white_bg.png"
                         alt=""
                         layout="fill" />
                 </div>
