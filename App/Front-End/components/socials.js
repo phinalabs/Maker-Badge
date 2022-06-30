@@ -2,7 +2,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 const socialMenu = [
     {
         name: 'Twitter',
-        href: 'twitter.com/phinalabs',
+        href: 'https://twitter.com/phinalabs',
         icon: FaTwitter,
     },
     {
