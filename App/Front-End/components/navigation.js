@@ -6,24 +6,24 @@ import {
     CursorClickIcon,
     MenuIcon,
     ShieldCheckIcon,
-    SupportIcon,
     XIcon,
 } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 const menuItems = [
     {
         name: 'About',
         description: 'Get a better understanding of where your traffic is coming from.',
-        href: '#',
+        href: '/about',
         icon: ChartBarIcon,
     },
     {
         name: 'Docs',
         description: 'Speak directly to your customers in a more meaningful way.',
-        href: '#',
+        href: '/docs',
         icon: CursorClickIcon,
     },
-    { name: 'Events', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
+    { name: 'Events', description: "Your customers' data will be safe and secure.", href: '/events', icon: ShieldCheckIcon },
 
 ]
 
@@ -39,7 +39,7 @@ function classNames(...classes) {
 
 export default function Navigation() {
     return (
-        <Popover className="relative bg-white dark:bg-black">
+        <Popover className="relative bg-white dark:bg-black sticky top-0 z-50">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -95,11 +95,14 @@ export default function Navigation() {
                         <div className="pt-5 pb-6 px-5">
                             <div className="flex items-center justify-between">
                                 <div>
+                                    <Link href="/">
                                     <img
                                         className="h-8 w-auto"
                                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                        alt="Workflow"
+                                        alt="Maker Badge"
                                     />
+                                    </Link>
+
                                 </div>
                                 <div className="-mr-2">
                                     <Popover.Button className="bg-white dark:bg-black rounded-md p-2 inline-flex items-center justify-center dark:text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -111,14 +114,15 @@ export default function Navigation() {
                             <div className="mt-6">
                                 <nav className="grid gap-y-8">
                                     {menuItems.map((item) => (
-                                        <a
-                                            key={item.name}
-                                            href={item.href}
-                                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                                        >
-                                            <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                                            <span className="ml-3 text-base font-medium dark:text-white">{item.name}</span>
-                                        </a>
+                                        <link href={item.href} key={item.name}>
+                                            <a
+                                                href={item.href}
+                                                className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                                            >
+                                                <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                                <span className="ml-3 text-base font-medium dark:text-white">{item.name}</span>
+                                            </a>
+                                        </link>
                                     ))}
                                 </nav>
                             </div>
