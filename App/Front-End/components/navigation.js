@@ -9,6 +9,7 @@ import {
     XIcon,
 } from '@heroicons/react/outline'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const menuItems = [
     {
@@ -45,11 +46,11 @@ export default function Navigation() {
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="#">
                             <span className="sr-only">Workflow</span>
-                            <img
-                                className="h-8 w-auto sm:h-10"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                alt=""
-                            />
+                            <image
+                            className="h-8 w-auto sm:h-10"
+                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                            alt=""
+                             />
                         </a>
                     </div>
                     <div className="-mr-2 -my-2 md:hidden">
@@ -96,11 +97,11 @@ export default function Navigation() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <Link href="/">
-                                    <img
+                                        <image 
                                         className="h-8 w-auto"
                                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                         alt="Maker Badge"
-                                    />
+                                        />
                                     </Link>
 
                                 </div>
