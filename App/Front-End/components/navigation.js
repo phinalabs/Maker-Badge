@@ -46,10 +46,12 @@ export default function Navigation() {
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="#">
                             <span className="sr-only">Workflow</span>
-                            <image
-                            className="h-8 w-auto sm:h-10"
+                            <Image
                             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                            alt=""
+                            alt="logo"
+                            className="h-8 w-auto sm:h-10"
+                            width={80}
+                            height={80}
                              />
                         </a>
                     </div>
@@ -64,10 +66,10 @@ export default function Navigation() {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                                className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:text-indigo-600 "
                             >
                                 <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                                <span className="ml-3 text-base font-medium dark:text-white">{item.name}</span>
+                                <span className="ml-3 text-base font-medium dark:text-white dark:hover:text-indigo-600">{item.name}</span>
                             </a>
                         ))}
                     </Popover.Group>

@@ -1,6 +1,8 @@
 import React from 'react';
 import SocialIcons from './socialicons';
 
+import Image from 'next/image'
+
 export default function Hero() {
     return (
         <div className="bg-white dark:bg-black overflow-hidden content-center flex items-center h-5/6">
