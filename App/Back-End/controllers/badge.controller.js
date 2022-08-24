@@ -7,7 +7,7 @@ exports.findAllBadges = async (req, res) => {
         res.json(badges)
     } catch (error) {
         res.status(500).json({
-            message: error.message || "Something goes wrong retieving the tasks"
+            message: error.message || "Something went wrong retieving the badge"
         })
     }
 };
@@ -16,15 +16,15 @@ exports.findAllBadges = async (req, res) => {
 exports.createBadge = async (req, res) => {
     try {
         const newBadge = new Badge({
-            name: req.body.name,
-            author: req.body.author,
+            id: req.body.id,
+            owner: req.body.owner,
             status: req.body.status ? req.body.status : false
         });
         const badgeSaved = await newBadge.save();
         res.json(badgeSaved)
     } catch (error) {
         res.status(500).json({
-            message: error.message || "Something goes wrong creating a badge"
+            message: error.message || "Something went wrong creating the badge"
         })
     }
 };

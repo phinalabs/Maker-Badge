@@ -45,13 +45,13 @@ export default function Navigation() {
                 <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="#">
-                            <span className="sr-only">Workflow</span>
+                            <span className="sr-only">MakerBadge</span>
                             <Image
-                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                            src="/images/phinalab.png"
                             alt="logo"
                             className="h-8 w-auto sm:h-10"
-                            width={80}
-                            height={80}
+                            width={120}
+                            height={40}
                              />
                         </a>
                     </div>

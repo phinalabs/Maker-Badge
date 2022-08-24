@@ -1,17 +1,14 @@
 const mongoose = require('mongoose');
 
-
 // Define schema
 const badgeSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true
+    id: {
+        type: Number,
+        required: true
     },
     owner: {
         type: String,
         required: true,
-        trim: true
     },
     status: {
         type: Boolean,

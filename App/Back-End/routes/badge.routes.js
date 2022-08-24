@@ -9,7 +9,9 @@ router.get('/', badgeControl.findAllBadges);
 
 router.get('/:id', badgeControl.findOneBadge);
 
-router.post('/', [authToken.verifyToken], badgeControl.createBadge);
+//router.post('/', [authToken.verifyToken], badgeControl.createBadge);
+
+router.post('/', badgeControl.createBadge);
 
 router.put('/:id', [authToken.verifyToken], badgeControl.updateBadge);
 
