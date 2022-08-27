@@ -10,6 +10,11 @@ const socialMenu = [
         href: 'https://github.com/phinalabs/Maker-Badge',
         icon: FaGithub,
     },
+{
+        name: 'Github',
+        href: 'https://github.com/phinalabs/Maker-Badge',
+        icon: FaGithub,
+    },
 
 ]
 
