@@ -17,8 +17,10 @@ exports.createEvent = async (req, res) => {
     try {
         const newEvent = new Event({
             name: req.body.name,
-            author: req.body.author,
-            status: req.body.status ? req.body.status : false
+            date: req.body.date,
+            location: req.body.location,
+            createdBy: req.body.createdBy,
+            details: req.body.details ? req.body.details : false
         });
         const eventSaved = await newEvent.save();
         res.json(eventSaved)

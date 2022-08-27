@@ -8,22 +8,26 @@ const eventsSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    createdBy: {
-        type: String,
-        required: true,
-        trim: true
-    },
     date: {
         type: Date,
         required: true,
+        validate: function (input) {
+            return new Date(input) >= new Date();
+        },
+        message: input => `${input} must be greater than the current date!`
     },
     location: {
         type: String,
         required: true
     },
-    status: {
-        type: Boolean,
-        default: false
+    createdBy: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    details: {
+        type: String,
+        reuired: true
     }
 });
 

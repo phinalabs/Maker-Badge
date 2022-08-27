@@ -1,4 +1,5 @@
 const express = require('express');
+const  cors = require('cors');
 const morgan = require('morgan');
 const mongoose = require('./config/database');
 const pkg = require('./package.json');
@@ -17,7 +18,7 @@ mongoose.connection.on('error', console.error.bind(console, 'DB Connection Errro
 
 // Settings
 app.set('pkg', pkg);
-
+app.use(cors());
 
 // Middleware
 app.use(morgan('dev'));
