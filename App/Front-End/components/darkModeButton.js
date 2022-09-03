@@ -1,6 +1,6 @@
 import useDarkMode from './useDarkMode'
 
-export default function DarkModeButtons() {
+export default function DarkModeButton() {
   const [colorTheme, setTheme] = useDarkMode();
   return (
     <div className='dark:bg-black bg-white fixed bottom-10 right-10'>
