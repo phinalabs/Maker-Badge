@@ -30,7 +30,9 @@ export default function Hero() {
                                             <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> About</a>
                                         </div>
                                     </div>
-                                    Follow the project: <SocialIcons></SocialIcons>
+                                    Follow the project:
+                                    <div className="flex items-center mt-5 gap-2 dark:text-white"><SocialIcons></SocialIcons></div>
+                                    
                                 </div>
                             </div>
                         </div>
