@@ -44,7 +44,7 @@ export default function Navigation() {
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#">
+                        <a href="/">
                             <span className="sr-only">MakerBadge</span>
                             <Image
                             src="/images/phinalab.png"
