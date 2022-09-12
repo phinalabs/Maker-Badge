@@ -13,9 +13,8 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <main>
+      <main className="bg-white dark:bg-black">
         {children}
-
         <DarkModeButton />
       </main>
       <Footer />

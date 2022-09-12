@@ -9,11 +9,11 @@ export default function Footer() {
                     <div className="bg-white dark:bg-black">
                         <div className="mx-auto max-w-7xl px-4 ">
                             <div className="text-center">
-                                <p className="mt-3 text-base dark:text-white">
+                                <div className="mt-3 text-base dark:text-white">
                                     Maker Badge
                                     <span className='ml-3'>{(new Date().getFullYear())}</span>
-                                    <SocialIcons className="text-center"></SocialIcons>
-                                </p>                              
+                                    <div className='flex justify-center mt-5 gap-2'><SocialIcons className="text-center" /></div>
+                                </div>                              
                             </div>
                         </div>
                     </div>
