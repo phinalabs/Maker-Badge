@@ -1,6 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout';
-import Hero from "/components/hero"
+import HomeHero from "/components/HomeHero";
 import DarkModeButtons from '../components/darkModeButton';
 
 
@@ -8,7 +7,7 @@ function HomePage() {
 
     return (
             <div className='dark:bg-black bg-white h-screen'>
-                <Hero></Hero>
+                <HomeHero></HomeHero>
                 <DarkModeButtons />
             </div>
     )
