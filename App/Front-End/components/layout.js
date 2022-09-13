@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <main className="bg-white dark:bg-black">
+      <main className="bg-white dark:bg-black dark:text-white">
         {children}
         <DarkModeButton />
       </main>

@@ -1,6 +1,10 @@
+import Hero from "../components/hero"
+
 function About() {
     return (
-      <div>About</div>
+      <>
+      <Hero title="About" description="More about this application"/>
+      </>
     )
   }
   

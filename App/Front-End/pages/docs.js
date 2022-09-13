@@ -1,6 +1,9 @@
+import Hero from "../components/hero"
 function Docs() {
     return (
-      <div>Docs</div>
+      <>
+      <Hero title="Docs" description="More about this application"/>
+      </>
     )
   }
   
