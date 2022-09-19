@@ -8,3 +8,5 @@ Routes
 /events
 /badge && badge/<id>
 /badges
+
+npx nodemon

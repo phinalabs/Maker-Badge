@@ -7,7 +7,6 @@ function BadgesCard() {
 
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
-    console.log(data);
 
     return (
         <div className="flex justify-center">

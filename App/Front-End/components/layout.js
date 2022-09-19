@@ -1,7 +1,7 @@
 import Head from "next/head";
-import useDarkMode from '../components/useDarkMode'
+import useDarkMode from './UseDarkMode'
 import DarkModeButton from "./darkModeButton";
-import Navigation from './navigation'
+import Navigation from './Navigation'
 import Footer from './footer';
 
 export default function Layout({ children }) {
