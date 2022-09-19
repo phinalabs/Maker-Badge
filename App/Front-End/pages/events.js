@@ -1,5 +1,5 @@
-import EventsCard from "../components/eventsCard";
-import Hero from "../components/hero";
+import EventsCard from "../components/EventsCard";
+import Hero from "../components/Hero";
 
 function Events() {
   return (

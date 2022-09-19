@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialIcons from './socialicons';
+import SocialIcons from './Social';
 
 export default function Footer() {
     return (
@@ -12,8 +12,10 @@ export default function Footer() {
                                 <div className="mt-3 text-base dark:text-white">
                                     Maker Badge
                                     <span className='ml-3'>{(new Date().getFullYear())}</span>
-                                    <div className='flex justify-center mt-5 gap-2'><SocialIcons className="text-center" /></div>
-                                </div>                              
+                                    <div className='flex justify-center mt-5 gap-2'>
+                                        <SocialIcons className="text-center" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,5 @@
 import React from 'react';
-import SocialIcons from './socialicons';
-
-import Image from 'next/image'
+import Social from './Social';
 
 export default function HomeHero() {
     return (
@@ -31,7 +29,8 @@ export default function HomeHero() {
                                         </div>
                                     </div>
                                     <div className="flex items-center mt-5 gap-2">
-                                        Follow the project: <SocialIcons></SocialIcons></div>
+                                        Follow the project: <Social></Social>
+                                        </div>
                                 </div>
                             </div>
                         </div>

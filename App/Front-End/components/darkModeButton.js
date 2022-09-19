@@ -1,4 +1,4 @@
-import useDarkMode from './useDarkMode'
+import useDarkMode from './UseDarkMode'
 
 export default function DarkModeButton() {
   const [colorTheme, setTheme] = useDarkMode();
