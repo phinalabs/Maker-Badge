@@ -7,7 +7,7 @@ const badgeSchema = new mongoose.Schema({
         required: true
     },
     owner: {
-        type: String,
+        type: Number,
         required: true,
     },
     status: {
