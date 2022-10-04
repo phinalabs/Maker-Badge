@@ -12,15 +12,11 @@ mongoose.connect(DB_URL, {
     useUnifiedTopology:true
   }, () => {
     console.log(DB_URL);
-    console.log(`DB up and running`);
+    console.log(`${process.env.MONGO_DB_DBNAME} connected, up and running`);
   });
    mongoose.Promise = global.Promise;
 
-// mongoose.connect(mongoDB, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// });
-// mongoose.Promise = global.Promise;
+
 
 module.exports = mongoose;
 
