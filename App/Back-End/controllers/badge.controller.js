@@ -1,4 +1,4 @@
-const Badge = require('../models/Badge');
+const Badge = require('../models/badge');
 
 
 exports.findAllBadges = async (req, res) => {
