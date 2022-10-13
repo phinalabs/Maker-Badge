@@ -4,9 +4,14 @@
   "description": "Maker Badge back end",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "prod": "NODE_ENV=production nodemon index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "api", "rest", "json"
+  ],
   "author": "volkan",
   "license": "ISC",
   "dependencies": {
