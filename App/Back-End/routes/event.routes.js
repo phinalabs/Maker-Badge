@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const eventControl = require('../controllers/event.controller');
-const authToken = require('../middleware/authToken');
 
 
 router.get('/', eventControl.findAllEvents);

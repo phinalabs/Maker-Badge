@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const mode = '';
 
 
-const authRoutes = require('./routes/auth.routes');
 const badgeRoutes = require('./routes/badge.routes');
 const eventRoutes = require('./routes/event.routes')
 
@@ -23,7 +22,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.use('/api/auth', authRoutes);
 app.use('/api/badges', badgeRoutes);
 app.use('/api/events', eventRoutes);
 
