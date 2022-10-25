@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-const eventControl = require('../controllers/event.controller');
+let eventControl = require('../controllers/event.controller');
 
 
 router.get('/', eventControl.findAllEvents);

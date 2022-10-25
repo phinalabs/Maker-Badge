@@ -1,16 +1,16 @@
-const config = require('./database.js');
-const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
-const pkg = require('./package.json');
-const mongoose = require('mongoose');
-const mode = '';
+let config = require('./database.js');
+let express = require('express');
+let cors = require('cors');
+let morgan = require('morgan');
+let pkg = require('./package.json');
+let mongoose = require('mongoose');
+let mode = '';
 
 
-const badgeRoutes = require('./routes/badge.routes');
-const eventRoutes = require('./routes/event.routes')
+let badgeRoutes = require('./routes/badge.routes');
+let eventRoutes = require('./routes/event.routes');
 
-const app = express();
+let app = express();
 
 // Settings
 app.set('pkg', pkg);

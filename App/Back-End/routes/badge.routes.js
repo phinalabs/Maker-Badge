@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-const badgeControl = require('../controllers/badge.controller');
+let badgeControl = require('../controllers/badge.controller');
 
 
 router.get('/', badgeControl.findAllBadges);

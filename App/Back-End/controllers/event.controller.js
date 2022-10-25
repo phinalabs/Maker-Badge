@@ -1,8 +1,8 @@
-const Event = require('../models/event');
+let Event = require('../models/eventModel');
 
 exports.findAllEvents = async (req, res) => {
     try {
-        const events = await Event.find();
+        let events = await Event.find();
         res.json(events)
     } catch (error) {
         res.status(500).json({
@@ -14,14 +14,14 @@ exports.findAllEvents = async (req, res) => {
 
 exports.createEvent = async (req, res) => {
     try {
-        const newEvent = new Event({
+        let newEvent = new Event({
             name: req.body.name,
             date: req.body.date,
             location: req.body.location,
             createdBy: req.body.createdBy,
             details: req.body.details ? req.body.details : false
         });
-        const eventSaved = await newEvent.save();
+        let eventSaved = await newEvent.save();
         res.json(eventSaved)
     } catch (error) {
         res.status(500).json({
@@ -32,9 +32,9 @@ exports.createEvent = async (req, res) => {
 
 
 exports.findOneEvent = async (req, res) => {
-    const { id } = req.params;
+    let { id } = req.params;
     try {
-        const event = await Event.findById(id)
+        let event = await Event.findById(id)
         if(!event) return res.status(404).json({
             message: `Event with id ${id} does not exists!`
         });
@@ -48,9 +48,9 @@ exports.findOneEvent = async (req, res) => {
 
 
 exports.deleteEvent = async (req, res) => {
-    const { id } = req.params;
+    let { id } = req.params;
     try {
-        const data = await Event.findByIdAndDelete(id)
+        let data = await Event.findByIdAndDelete(id)
         res.json({
             message: `${data.name} - Event were deleted successfully!`
         })
@@ -63,7 +63,7 @@ exports.deleteEvent = async (req, res) => {
 
 
 exports.updateEvent = async (req, res) => {
-    const {id} = req.params;
+    let {id} = req.params;
     try {
         await Event.findByIdAndUpdate(id, req.body)
     res.json({

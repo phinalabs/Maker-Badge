@@ -1,9 +1,9 @@
-const Badge = require('../models/badge');
+let Badge = require('../models/badgeModel');
 
 
 exports.findAllBadges = async (req, res) => {
     try {
-        const badges = await Badge.find();
+        let badges = await Badge.find();
         res.json(badges)
     } catch (error) {
         res.status(500).json({
@@ -15,12 +15,12 @@ exports.findAllBadges = async (req, res) => {
 
 exports.createBadge = async (req, res) => {
     try {
-        const newBadge = new Badge({
+        let newBadge = new Badge({
             id: req.body.id,
             owner: req.body.owner,
             status: req.body.status ? req.body.status : false
         });
-        const badgeSaved = await newBadge.save();
+        let badgeSaved = await newBadge.save();
         res.json(badgeSaved)
     } catch (error) {
         res.status(500).json({
@@ -31,9 +31,9 @@ exports.createBadge = async (req, res) => {
 
 
 exports.findOneBadge = async (req, res) => {
-    const { id } = req.params;
+    let { id } = req.params;
     try {
-        const badge = await Badge.findById(id)
+        let badge = await Badge.findById(id)
         if(!badge) return res.status(404).json({
             message: `Badge with id ${id} does not exists!`
         });
@@ -47,9 +47,9 @@ exports.findOneBadge = async (req, res) => {
 
 
 exports.deleteBadge = async (req, res) => {
-    const { id } = req.params;
+    let { id } = req.params;
     try {
-        const data = await Badge.findByIdAndDelete(id)
+        let data = await Badge.findByIdAndDelete(id)
         res.json({
             message: `${data.name} - Badge were deleted successfully!`
         })
@@ -62,7 +62,7 @@ exports.deleteBadge = async (req, res) => {
 
 
 exports.updateBadge = async (req, res) => {
-    const {id} = req.params;
+    let {id} = req.params;
     try {
         await Badge.findByIdAndUpdate(id, req.body)
     res.json({
