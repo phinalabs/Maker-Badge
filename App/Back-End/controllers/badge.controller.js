@@ -1,4 +1,4 @@
-let Badge = require('../models/badgeModel');
+let Badge = require('../models/badge.model');
 
 
 exports.findAllBadges = async (req, res) => {

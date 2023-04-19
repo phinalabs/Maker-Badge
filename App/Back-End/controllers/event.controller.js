@@ -1,4 +1,4 @@
-let Event = require('../models/eventModel');
+let Event = require('../models/event.model');
 
 exports.findAllEvents = async (req, res) => {
     try {

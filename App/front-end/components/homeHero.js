@@ -3,14 +3,14 @@ import Social from './Social';
 
 export default function HomeHero() {
     return (
-        <div className="bg-white dark:bg-black overflow-hidden content-center flex items-center h-5/6">
-            <div className='container mx-auto px-4 py-16 md:py-20 '>
+        <div className="flex items-center content-center overflow-hidden bg-white dark:bg-black h-5/6">
+            <div className='container px-4 py-16 mx-auto md:py-20 '>
                 <div className='gap-2 md:gap-0 md:grid lg:grid md:grid-cols-12'>
                     <div className="col-span-6">
                         <div className="bg-white dark:bg-black">
-                            <div className="mx-auto max-w-7xl px-4 dark:text-white">
+                            <div className="px-4 mx-auto max-w-7xl dark:text-white">
                                 <div className="sm:text-center lg:text-left">
-                                    <h1 className="text-5xl tracking-tight font-extrabold md:text-6xl">
+                                    <h1 className="text-5xl font-extrabold tracking-tight md:text-6xl">
                                         <span className="block xl:inline">Maker </span>
                                         <span className="block text-indigo-600 xl:inline">Badge</span>
                                     </h1>
@@ -22,13 +22,13 @@ export default function HomeHero() {
                                     <p className="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Coming soon</p>
                                     <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                         <div className="rounded-md shadow">
-                                            <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Docs </a>
+                                            <a href="#" className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Docs </a>
                                         </div>
                                         <div className="mt-3 sm:mt-0 sm:ml-3">
-                                            <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> About</a>
+                                            <a href="/about" className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> About</a>
                                         </div>
                                     </div>
-                                    <div className="flex items-center mt-5 gap-2">
+                                    <div className="flex items-center gap-2 mt-5">
                                         Follow the project: <Social></Social>
                                         </div>
                                 </div>
