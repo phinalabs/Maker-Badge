@@ -1,3 +1,15 @@
+//Get badges
+var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  
+  fetch("http://127.0.0.1:3300/api/badges", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+
 async function connect() {
     let device = await navigator.usb.requestDevice({
         filters: [{ vendorId: 0x2341 }]

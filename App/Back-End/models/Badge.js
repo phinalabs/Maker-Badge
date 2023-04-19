@@ -13,6 +13,15 @@ let badgeSchema = new mongoose.Schema({
     status: {
         type: Boolean,
         default: false
+    },
+    bio: {
+        type: String,
+    },
+    address: {
+        type: String,
+    },
+    links: {
+        type: Array
     }
 });
 
