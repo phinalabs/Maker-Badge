@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 // Define schema
 let badgeSchema = new mongoose.Schema({
-    id: {
+    badgeId: {
         type: Number,
         required: true
     },

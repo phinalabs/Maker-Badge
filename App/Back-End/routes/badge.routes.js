@@ -6,13 +6,13 @@ let badgeControl = require('../controllers/badge.controller');
 
 router.get('/', badgeControl.findAllBadges);
 
-router.get('/:id', badgeControl.findOneBadge);
+router.get('/:badgeId', badgeControl.findOneBadge);
 
 router.post('/', badgeControl.createBadge);
 
-router.put('/:id', badgeControl.updateBadge);
+router.put('/:badgeId', badgeControl.updateBadge);
 
-router.delete('/:id', badgeControl.deleteBadge);
+router.delete('/:badgeId', badgeControl.deleteBadge);
 
 
 module.exports = router;

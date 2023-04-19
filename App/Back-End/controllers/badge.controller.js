@@ -16,7 +16,7 @@ exports.findAllBadges = async (req, res) => {
 exports.createBadge = async (req, res) => {
     try {
         let newBadge = new Badge({
-            id: req.body.id,
+            badgeId: req.body.badgeId,
             owner: req.body.owner,
             status: req.body.status ? req.body.status : false
         });
@@ -31,38 +31,38 @@ exports.createBadge = async (req, res) => {
 
 
 exports.findOneBadge = async (req, res) => {
-    let { id } = req.params;
+    let { badgeId } = req.params;
     try {
-        let badge = await Badge.findById(id)
+        let badge = await Badge.findById(badgeId)
         if(!badge) return res.status(404).json({
-            message: `Badge with id ${id} does not exists!`
+            message: `Badge with id ${badgeId} does not exists!`
         });
         res.json(badge)
     } catch (error) {
         res.status(500).json({
-            message: error.message || `Error retrieving badge with id: ${id}`
+            message: error.message || `Error retrieving badge with id: ${badgeId}`
         })
     }
 };
 
 
 exports.deleteBadge = async (req, res) => {
-    let { id } = req.params;
+    let { badgeId } = req.params;
     try {
-        let data = await Badge.findByIdAndDelete(id)
+        let data = await Badge.findByIdAndDelete(badgeId)
         res.json({
             message: `${data.name} - Badge were deleted successfully!`
         })
     } catch (error) {
         res.status(500).json({
-            message: `Cannot delete badge with id ${id}`
+            message: `Cannot delete badge with id ${badgeId}`
         })
     }
 }
 
 
 exports.updateBadge = async (req, res) => {
-    let {id} = req.params;
+    let {badgeId} = req.params;
     try {
         await Badge.findByIdAndUpdate(id, req.body)
     res.json({
@@ -70,7 +70,7 @@ exports.updateBadge = async (req, res) => {
     })
     } catch (error) {
         res.status(500).json({
-            message: `Cannot update badge with id: ${id}`
+            message: `Cannot update badge with id: ${badgeId}`
         })
     }
 }
