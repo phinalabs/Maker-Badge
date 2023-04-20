@@ -3,15 +3,15 @@ import useSWR from 'swr'
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 function BadgesCard() {
-    const { data, error } = useSWR('http://localhost:3000/api/badges', fetcher)
+    const { data, error } = useSWR('http://localhost:3300/api/badges', fetcher)
 
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
 
     return (
         <div className="flex justify-center">
-            <div className="p-4 w-full max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                <div className="flex justify-between items-center mb-4">
+            <div className="w-full max-w-md p-4 bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                <div className="flex items-center justify-between mb-4">
                     <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Badges</h5>
                     <a href="#" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                         View all
@@ -41,11 +41,9 @@ function BadgesCard() {
                                 </div>
                             </li>
                         )}
-
                     </ul>
                 </div>
             </div>
-
         </div>
     )
 }
