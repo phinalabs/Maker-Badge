@@ -8,9 +8,8 @@ const nextConfig = {
       locales: ['en'],
       defaultLocale: 'en',
     },
-    experimental: {
-      forceSwcTransforms: true,
-    },
+    // experimental: {
+    //   forceSwcTransforms: true,
+    // },
   }
-  
   module.exports = nextConfig
